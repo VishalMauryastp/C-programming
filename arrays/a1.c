@@ -1,6 +1,6 @@
 // using loop array manipulation
 #include <stdio.h>
-int main()
+void main()
 {
     int n[10], i;
     printf("enter array element\n");
