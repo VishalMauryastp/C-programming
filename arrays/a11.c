@@ -1,19 +1,17 @@
-// write a program to convert digits into words
+// write a program to convert digits into words.
 #include <stdio.h>
 void main()
 {
-    int i, n, y, x, rev = 0;
-
+    int i, n, x, y, rev = 0;
     printf("enter number");
     scanf("%d", &n);
     while (n > 0)
     {
         x = n % 10;
-
         rev = rev * 10 + x;
         n = n / 10;
     }
-while(rev>0)
+    while (rev > 0)
     {
         y = rev % 10;
         if (y == 0)
@@ -56,9 +54,7 @@ while(rev>0)
         {
             printf("nine ");
         }
-
         rev = rev / 10;
     }
-
     printf("\n");
 }
