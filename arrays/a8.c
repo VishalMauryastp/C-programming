@@ -1,44 +1,60 @@
-// write a program to add nxn matrix by using array
+// write a program to convert digits into words.
 #include <stdio.h>
 void main()
 {
-    int i, j, r, c;
-    printf("Enter the numbers of row and column: ");
-    scanf("%d%d", &r, &c);
-    int a[r][c], b[r][c], x[r][c];
-    printf("Enter the first matrix element\n");
-    for (i = 0; i < r; i++)
+    int i, n, x, y, rev = 0;
+    printf("Enter number: ");
+    scanf("%d", &n);
+    while (n > 0)
     {
-        for (j = 0; j < c; j++)
-        {
-            scanf("%d", &a[i][j]);
-        }
+        x = n % 10;
+        rev = rev * 10 + x;
+        n = n / 10;
     }
-    printf("Enter the second matrix element\n");
-    for (i = 0; i < r; i++)
+    while (rev > 0)
     {
-        for (j = 0; j < c; j++)
+        y = rev % 10;
+        if (y == 0)
         {
-            scanf("%d", &b[i][j]);
+            printf("Zero ");
         }
-        printf("\n");
-    }
-    /* Add two matrix element*/
-    for (i = 0; i < r; i++)
-    {
-        for (j = 0; j < c; j++)
+        else if (y == 1)
         {
-            x[i][j] = a[i][j] + b[i][j];
-            printf("%d\t", x[i][j]);
+            printf("one ");
         }
-        printf("\n");
+        else if (y == 2)
+        {
+            printf("two ");
+        }
+        else if (y == 3)
+        {
+            printf("three ");
+        }
+        else if (y == 4)
+        {
+            printf("four ");
+        }
+        else if (y == 5)
+        {
+            printf("five ");
+        }
+        else if (y == 6)
+        {
+            printf("six ");
+        }
+        else if (y == 7)
+        {
+            printf("seven ");
+        }
+        else if (y == 8)
+        {
+            printf("eight ");
+        }
+        else if (y == 9)
+        {
+            printf("nine ");
+        }
+        rev = rev / 10;
     }
-    // for (i = 0; i < r; i++)
-    // {
-    //     for (j = 0; j < c; j++)
-    //     {
-    //         printf("%d\t", x[i][j]);
-    //     }
-    //     printf("\n");
-    // }
+    printf("\n");
 }
